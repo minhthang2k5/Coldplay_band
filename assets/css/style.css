@@ -30,7 +30,7 @@ html{
 }
 
 #nav {
-
+    display: inline-block;
 }
 #nav, .subnav{
     list-style-type: none;
@@ -45,7 +45,9 @@ html{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     min-width: 160px;
 }
-
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
 
 #nav > li {
     display: inline-block;
@@ -80,6 +82,22 @@ html{
    
 }
 
+#header .seach-btn{
+    float: right;
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+#header .seach-btn:hover{
+    background-color: rgb(244, 67, 54);
+    cursor: pointer;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+
+}
 
 #slider {
 
