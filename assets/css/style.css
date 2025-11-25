@@ -21,14 +21,38 @@ html{
 4.Kiểu dáng
 */
 
+/* Common */
 .clear {
     clear: both;
 }
- 
+
 .text-white {
     color: #fff !important;
 }
 
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+
+}
+
+.col {
+    float: left;
+    padding: 0px 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+/* Main */
 #main {
 
 }
@@ -173,11 +197,7 @@ html{
     margin-top: 48px;
 }
 
-#content .member-item {
-    float: left;
-    width: calc(100%/3);
-    text-align: center;
-}
+
 
 #content .member-name {
     font-size: 15px;
@@ -228,16 +248,10 @@ html{
 /*Place*/
 .places-list {
     margin-top: 32px;
-    margin-left: -8px;
-    margin-right: -8px;
     padding-bottom: 48px;
 }
 
-.place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0px 8px;
-}
+
 
 .place-img {
     width: 100%;
@@ -276,6 +290,7 @@ html{
     padding: 11px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 
 .place-buy-button:hover {
@@ -299,7 +314,7 @@ html{
     left: 0px;
     right: 0px;
     background: rgba(0,0,0,0.4);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -309,6 +324,7 @@ html{
     width: 900px;
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.9s;
 }
 
 .modal-header {
@@ -377,3 +393,22 @@ button#buy-tickets {
 .modal-footer a {
     color: #2196F3;
 }
+
+.modal.open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
