@@ -7,6 +7,7 @@
 
 html{
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 /*
 1.Làm từ ngoài vào trong
@@ -36,9 +37,16 @@ html{
 
 }
 
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col {
     float: left;
-    padding: 0px 8px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .col-third {
@@ -48,10 +56,23 @@ html{
 .col-half {
     width: 50%;
 }
+.col-full {
+    width: 100%;
+}
 
 .text-center {
     text-align: center !important;
 }
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+
 /* Main */
 #main {
 
@@ -168,7 +189,7 @@ html{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
 }
 
 #content .section-heading{
@@ -248,7 +269,6 @@ html{
 /*Place*/
 .places-list {
     margin-top: 32px;
-    padding-bottom: 48px;
 }
 
 
@@ -298,13 +318,84 @@ html{
     background-color: #ccc;
 }
 
+/* Contact */
+.contact-content {
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
 
+.contact-form {
+    font-size: 15px;
+}
 
-#footer {
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
 
+.form-submit-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: #000;
 }
 
 
+.form-submit-btn {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+    float: right;
+}
+
+
+/* Map Section */
+.map-section img {
+    width: 100%;
+}
+
+
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#footer .copyright {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #000;
+    opacity: 0.6;
+}
+
+#footer .copyright a {
+    opacity: 0.4;
+    cursor: pointer;
+}
 
 /* Modal*/
 .modal {
